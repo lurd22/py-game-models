@@ -1,4 +1,5 @@
 import json
+import datetime
 from db.models import Race, Skill, Guild, Player
 
 
@@ -37,5 +38,6 @@ def main() -> None:
                 "bio": pdata["bio"],
                 "race": race_obj,
                 "guild": guild_obj,
+                "created_at": datetime.datetime.now()
             }
         )
